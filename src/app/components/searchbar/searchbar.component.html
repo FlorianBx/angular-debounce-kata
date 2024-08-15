@@ -1,0 +1,8 @@
+    <input [formControl]="searchControl" placeholder="Rechercher...">
+    <ul>
+      @for (result of searchResults; track result) {
+        <li>{{ result.name }}</li>
+      } @empty {
+        <li>Aucun résultat</li>
+      }
+    </ul>
