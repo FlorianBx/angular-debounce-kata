@@ -2,7 +2,7 @@
 
 Ce projet est une application Angular simple qui illustre l'implémentation d'une barre de recherche avec un mécanisme de `debounce`. La barre de recherche permet aux utilisateurs de rechercher des utilisateurs depuis une API distante et de filtrer les résultats en fonction de la saisie. Le projet utilise des composants standalone d'Angular et inclut des tests unitaires pour garantir le bon fonctionnement des fonctionnalités.
 
-[](preview.png)
+![](./preview.png)
 
 ## Fonctionnalités
 
@@ -29,7 +29,7 @@ Ce projet est une application Angular simple qui illustre l'implémentation d'un
 
 1. Cloner le dépôt :
    ```bash
-   git clone https://github.com/votre-nom-utilisateur/debounce-search-bar.git
+   git clone https://github.com/FlorianBx/angular-debounce-kata.git
    cd debounce-search-bar
    ```
 
@@ -54,24 +54,6 @@ ng test
 ```
 
 Cela exécutera les tests avec Karma et affichera les résultats dans la console.
-
-## Capture d'Écran
-
-![Capture d'écran de la barre de recherche](screenshot.png)
-
-La capture d'écran ci-dessus montre la barre de recherche en action, affichant les résultats des utilisateurs filtrés en fonction de la saisie.
-
-### Ajouter une Capture d'Écran
-
-Pour ajouter une capture d'écran à votre projet :
-
-1. Capturez l'écran de l'application en cours d'exécution.
-2. Enregistrez la capture d'écran dans le répertoire racine de votre projet (ou dans un dossier `src/assets` si vous préférez).
-3. Référencez la capture d'écran dans votre README en utilisant la syntaxe markdown suivante :
-
-   ```markdown
-   ![Capture d'écran de la barre de recherche](screenshot.png)
-   ```
 
 ## Structure du Projet
 
