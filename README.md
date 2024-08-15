@@ -2,7 +2,7 @@
 
 Ce projet est une application Angular simple qui illustre l'implémentation d'une barre de recherche avec un mécanisme de `debounce`. La barre de recherche permet aux utilisateurs de rechercher des utilisateurs depuis une API distante et de filtrer les résultats en fonction de la saisie. Le projet utilise des composants standalone d'Angular et inclut des tests unitaires pour garantir le bon fonctionnement des fonctionnalités.
 
-[]('./preview.png')
+[](preview.png)
 
 ## Fonctionnalités
 
