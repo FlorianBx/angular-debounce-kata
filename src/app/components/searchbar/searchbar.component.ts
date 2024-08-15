@@ -16,11 +16,17 @@ export class SearchbarComponent {
   searchControl = new FormControl();
   searchResults: User[] = [];
 
-constructor(private http: UsersService) {
+  ngOnInit() {
+    this.http.getUsers().subscribe((user: User[]) => {
+      this.searchResults = user;
+    });
+  }
+
+  constructor(private http: UsersService) {
     this.searchControl.valueChanges
       .pipe(
         debounceTime(300),
-        switchMap(query => this.searchUsers(query))
+        switchMap((query) => this.searchUsers(query)),
       )
       .subscribe((results: User[]) => {
         this.searchResults = results;
@@ -28,13 +34,14 @@ constructor(private http: UsersService) {
   }
 
   searchUsers(query: string): Observable<User[]> {
-    return this.http.getUsers()
+    return this.http
+      .getUsers()
       .pipe(
         map((users: User[]) =>
           users.filter((user: any) =>
-            user.name.toLowerCase().includes(query.toLowerCase())
-          )
-        )
+            user.name.toLowerCase().includes(query.toLowerCase()),
+          ),
+        ),
       );
   }
 }

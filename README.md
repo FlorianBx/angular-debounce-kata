@@ -1,27 +1,101 @@
-# DebounceSearchBar
+# Projet Barre de Recherche avec Debounce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Ce projet est une application Angular simple qui illustre l'implémentation d'une barre de recherche avec un mécanisme de `debounce`. La barre de recherche permet aux utilisateurs de rechercher des utilisateurs depuis une API distante et de filtrer les résultats en fonction de la saisie. Le projet utilise des composants standalone d'Angular et inclut des tests unitaires pour garantir le bon fonctionnement des fonctionnalités.
 
-## Development server
+[]('./preview.png')
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Fonctionnalités
 
-## Code scaffolding
+- **Recherche avec Debounce** : Empêche la fonction de recherche d'être appelée trop fréquemment en mettant en place un temps de debounce. Cela optimise les performances en réduisant le nombre de requêtes API.
+- **Intégration API** : Récupère les données des utilisateurs depuis une API distante (JSONPlaceholder) et filtre les résultats localement.
+- **Design Responsive** : La barre de recherche est conçue pour être responsive et facile à utiliser.
+- **Tests Unitaires** : Inclut des tests unitaires pour le composant de recherche et le service, en utilisant les utilitaires de test d'Angular.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Utilisées
 
-## Build
+- **Angular** : Framework utilisé pour construire l'application frontend.
+- **RxJS** : Librairie utilisée pour gérer les flux de données asynchrones, incluant l'opérateur `debounce`.
+- **API JSONPlaceholder** : API REST gratuite utilisée pour les tests et le prototypage.
+- **Karma et Jasmine** : Framework de test et runner utilisés pour les tests unitaires.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Démarrage
 
-## Running unit tests
+### Prérequis
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js et npm installés sur votre système.
+- Angular CLI installé globalement : `npm install -g @angular/cli`.
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Cloner le dépôt :
+   ```bash
+   git clone https://github.com/votre-nom-utilisateur/debounce-search-bar.git
+   cd debounce-search-bar
+   ```
 
-## Further help
+2. Installer les dépendances :
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Lancer l'application :
+   ```bash
+   ng serve
+   ```
+
+4. Ouvrez votre navigateur et allez à l'adresse `http://localhost:4200`.
+
+### Exécuter les Tests
+
+Pour exécuter les tests unitaires, utilisez la commande suivante :
+
+```bash
+ng test
+```
+
+Cela exécutera les tests avec Karma et affichera les résultats dans la console.
+
+## Capture d'Écran
+
+![Capture d'écran de la barre de recherche](screenshot.png)
+
+La capture d'écran ci-dessus montre la barre de recherche en action, affichant les résultats des utilisateurs filtrés en fonction de la saisie.
+
+### Ajouter une Capture d'Écran
+
+Pour ajouter une capture d'écran à votre projet :
+
+1. Capturez l'écran de l'application en cours d'exécution.
+2. Enregistrez la capture d'écran dans le répertoire racine de votre projet (ou dans un dossier `src/assets` si vous préférez).
+3. Référencez la capture d'écran dans votre README en utilisant la syntaxe markdown suivante :
+
+   ```markdown
+   ![Capture d'écran de la barre de recherche](screenshot.png)
+   ```
+
+## Structure du Projet
+
+Voici un aperçu de la structure du projet :
+
+```plaintext
+src/
+│
+├── app/
+│   ├── components/
+│   │   └── searchbar/
+│   │       ├── searchbar.component.ts
+│   │       ├── searchbar.component.html
+│   │       ├── searchbar.component.css
+│   │       ├── searchbar.component.spec.ts
+│   │
+│   ├── services/
+│   │   └── users.service.ts
+│   │   └── users.service.spec.ts
+│   │
+│   └── app.component.ts
+│   └── app.component.html
+│   └── app.component.spec.ts
+│
+└── assets/
+    └── screenshot.png
+```
